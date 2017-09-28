@@ -1,1 +1,1 @@
-<h1>kfbkdjvb</h1>
+<center><h1>Контакты</h1></center>

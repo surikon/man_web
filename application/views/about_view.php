@@ -1,0 +1,1 @@
+<center><h1>О сайте</h1></center>

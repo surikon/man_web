@@ -4,15 +4,24 @@
 	align-items: center;
 	flex-wrap: wrap-reverse;
 	align-content: center;
-	width:40%;
-	background-color: red;
+	width:70%;
+	background-color: #dfc7ff;
 	padding: 1%;
 	border: 1px solid black;
 	border-radius: 5px;
 }
 
 .c_con{
+	background-color: #bcbfff;
     padding: 1%;
 	border: 1px solid black;
 	border-radius: 5px;
+	width: 20%;
+	font-family: "Palatino: serif";
+	font-weight: 200;
+	font-size: 110%;
+}
+
+.c_con:hover{
+	background-color: #a9a7ff;
 }
