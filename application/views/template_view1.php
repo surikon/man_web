@@ -12,13 +12,12 @@
     <center>
 		<header>
 			<div class = "p_con">
-					<div class = "c_con" onclick="goOut('http://localhost')">Войти</div>
+                    <div class = "c_con" onclick="goOut('http://localhost')">Главная</div>
 					<div class = "c_con" onclick="goOut('http://localhost/about')">О сайте</div>
 					<div class = "c_con" onclick="goOut('http://localhost/portfolio')">Портфолио</div>
 					<div class = "c_con" onclick="goOut('http://localhost/contacts')">Контакты</div>
 			</div>
 		</header>
-
 	</center>
     <?php include 'application/views/'.$content_view; ?>
 </body>
