@@ -3,7 +3,8 @@
     {
         function generate($content_view, $template_view, $result = null)
         {
-           include 'application/views/'.$template_view;
+            if($result) extract($result);
+            include 'application/views/'.$template_view;
         }
     }
 ?>

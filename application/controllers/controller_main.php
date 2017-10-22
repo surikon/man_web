@@ -9,49 +9,32 @@
 
         function action_index()
         {
-            $data = $this->model->get_data();
-
-            if(isset($_POST['registration']))
+            if(!isset($_SESSION['id']))
             {
-                $code = $_POST['code'];
-                $login = $_POST['login'];
-                $password = $_POST['password'];
-                $repass = $_POST['repass'];
-                $b = false;
-                while ($row = $data->fetch(PDO::FETCH_LAZY))
+                if (!empty($_POST['registration']))
                 {
-                    if($code == $row['code'])
-                    {
-                        if(!isset($login))
-                        {
-                            $b = true;
-                        }
-                        else
-                        {
-                            $result = "Вы уже заригестрированы!";
-                        }
-                    }
+                    $result = [];
+                    $code = $_POST['code'];
+                    $login = $_POST['login'];
+                    $password = $_POST['password'];
+                    $repass = $_POST['repass'];
+                    $result = $this->model->get_data_reg($code, $login, $password, $repass);
                 }
-                if($b && $password == $repass)
+                else if (!empty($_POST['authorisation']))
                 {
-                    $this->model->update_user($code, $login, $password);
-                    if(empty($result))
-                    {
-                        $result = "Поздравляю! Вы успешно зарегистрировались!";
-                    }
+                    $login = $_POST['login'];
+                    $password = $_POST['password'];
+                    $result = $this->model->get_data_aut($login, $password);
                 }
-                else
-                {
-                    if(empty($result))
-                    {
-                        $result = "Ошибка! Неправильный пароль, или пригласительный код.";
-                    }
-                }
+                $this->view->generate('main_view.php', 'template_view1.php', $result);
             }
-
-            $this->view->generate('main_view.php', 'template_view1.php', $result);
+            else
+            {
+                echo "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+                $id = $_SESSION['id'];
+                $result = $this->model->personal_area($id);
+                $this->view->generate('personal_area.php', "template_view2.php", $result);
+            }
         }
-
-
     }
 ?>

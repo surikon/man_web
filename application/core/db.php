@@ -39,5 +39,5 @@ class DB
         return $stmt;
     }
 }
-
+//run -> query (подготовленные запросы)
 //http://phpfaq.ru/pdo/pdo_wrapper

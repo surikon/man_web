@@ -4,7 +4,6 @@
     <meta charset = "utf-8">
     <title>Surnachev_Nikita</title>
     <link rel = "stylesheet" type = "text/css" href = "/css/style.css" />
-    <link rel = "stylesheet" type = "text/css" href = "/css/bootstrap.min.css" />
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/core.js" type = "text/javascript"></script>
     <script src = "/js/main.js" type = "text/javascript"></script>
 </head>
