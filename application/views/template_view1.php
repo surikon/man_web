@@ -11,13 +11,22 @@
     <center>
 		<header>
 			<div class = "p_con">
-                    <div class = "c_con" onclick="goOut('http://localhost')">Главная</div>
-					<div class = "c_con" onclick="goOut('http://localhost/about')">О сайте</div>
-					<div class = "c_con" onclick="goOut('http://localhost/portfolio')">Портфолио</div>
-					<div class = "c_con" onclick="goOut('http://localhost/contacts')">Контакты</div>
+                <div class = "c_con"><a href = "http://localhost">Главная</a></div>
+                <div class = "c_con"><a href="http://localhost/register">Войти</a></div>
 			</div>
+            <div class = "p_logo">
+                <div class = "c_logo">
+                    <img src="../../images/logo.png" width = 10%>
+                    <span class="logo">Surik production</span>
+                </div>
+                <div class = "c_logo">
+                    <div
+                </div>
+            </div>
 		</header>
-	</center>
-    <?php include 'application/views/'.$content_view; ?>
+    <div class = "body_str">
+        <?php include 'application/views/'.$content_view; ?>
+    </div>
+    </center>
 </body>
 </html>

@@ -12,9 +12,9 @@
     <header>
         <div class = "p_con">
             <div class = "c_con" onclick="goOut('http://localhost')">Личный кабинет</div>
-            <div class = "c_con" onclick="goOut('http://localhost/about')">Что-то</div>
-            <div class = "c_con" onclick="goOut('http://localhost/portfolio')">Что-то</div>
-            <div class = "c_con" onclick="goOut('http://localhost/contacts')">Что-то</div>
+            <div class = "c_con">Что-то</div>
+            <div class = "c_con">Что-то</div>
+            <div class = "c_con">Что-то</div>
         </div>
     </header>
 </center>

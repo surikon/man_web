@@ -1,35 +1,74 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
 .p_con{
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
-	flex-wrap: wrap-reverse;
 	align-content: center;
-	width:70%;
-	background-color: #dfc7ff;
+	width:100%;
+	background-color: #bcb0ff;
 	padding: 1%;
-	border: 1px solid black;
-	border-radius: 5px;
+	vertical-align: middle;
+	position: fixed;
+}
+
+.p_con A:link{
+	text-decoration: none;
+	color: black;
+}
+.p_con A:visited{
+	text-decoration: none;
+	color: black;
+}
+.p_con A:active{
+	text-decoration: none;
+	color: black;
+}
+.p_con > A:hover{
+	text-decoration: none;
+	color: black;
 }
 
 .c_con{
-	background-color: #bcbfff;
-    padding: 1%;
-	border: 1px solid black;
-	border-radius: 5px;
-	width: 20%;
 	font-family: "Palatino: serif";
+	width: 10%;
 	font-weight: 200;
-	font-size: 110%;
+	font-size: 103%;
+	display: inline-block;
+	text-align: center;
 }
 
-.c_con:hover{
-	background-color: #a9a7ff;
+.logo{
+	font-family: "Brush Script MT";
+	font-size:300%;
+}
+
+.p_logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 5%;
+	padding-bottom: 1%;
+	width: 100%;
+	background-color: #e1d4ff;
+}
+
+.c_logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Palatino";
+	width: 30%;
+	text-align: center;
 }
 
 .body_str{
-	width: 50%;
-	padding: 1%;
-	background-color: #faf8f3;
+	width: 60%;
+	padding-top: 3%;
+	background-color: #ebe9fa;
 }
 
 .authorisation_form{
@@ -55,11 +94,14 @@
 	border-radius: 5px;
     height:30px;
     width:40%;
+	padding: 1%;
+	vertical-align: middle;
 }
 .info {
     background-color: lightgreen;
     border: 1px solid black;
     border-radius: 5px;
-    height:40px;
+	padding: 1%;
     width:40%;
+	vertical-align: middle;
 }
