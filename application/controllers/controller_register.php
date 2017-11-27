@@ -18,12 +18,6 @@ class Controller_Register extends Controller
            $repass = $_POST['repass'];
            $result = $this->model->get_data_reg($code, $login, $password, $repass);
         }
-        else if (!empty($_POST['authorisation']))
-        {
-           $login = $_POST['login'];
-           $password = $_POST['password'];
-           $result = $this->model->get_data_aut($login, $password);
-        }
         $this->view->generate('register_view.php', 'template_view1.php', $result);
     }
 }

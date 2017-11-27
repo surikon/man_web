@@ -12,18 +12,15 @@
 		<header>
 			<div class = "p_con">
                 <div class = "c_con"><a href = "http://localhost">Главная</a></div>
-                <div class = "c_con"><a href="http://localhost/register">Войти</a></div>
+                <div class = "c_con"><a href="http://localhost/in">Войти</a></div>
+                <div class = "c_con"><a href="http://localhost/register">Зарегистрироваться</a></div>
 			</div>
-            <div class = "p_logo">
-                <div class = "c_logo">
-                    <img src="../../images/logo.png" width = 10%>
-                    <span class="logo">Surik production</span>
-                </div>
-                <div class = "c_logo">
-                    <div
-                </div>
-            </div>
 		</header>
+        <div class = "p_logo">
+            <div class = "c_logo">
+                <p> Тех.поддержка: тел. +79782568334, почта: suriknik@bk.com </p>
+            </div>
+        </div>
     <div class = "body_str">
         <?php include 'application/views/'.$content_view; ?>
     </div>
