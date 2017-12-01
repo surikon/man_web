@@ -1,0 +1,183 @@
+button.submit {
+    background-color: #bf768b;
+    background: -webkit-gradient(linear, left top, left bottom, from(#bf768b), to(#bf6e85));
+    background: -webkit-linear-gradient(top, #bf768b, #bf6b82);
+    background: -moz-linear-gradient(top, #bf768b, #915773);
+    background: -ms-linear-gradient(top, #bf768b, #bf6b7e);
+    background: -o-linear-gradient(top, #bf768b, #bf6a82);
+    background: linear-gradient(top, #bf768b, #bf6b82);
+    border: 1px solid #bf768b;
+    border-bottom: 1px solid #bf768b;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 #9fd574;
+    -webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+    -moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -o-box-shadow: 0 1px 0 0 #9fd574 inset;
+    color: black;
+    font-weight: bold;
+    padding: 6px 20px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #396715;
+}
+
+button.submit:hover {
+    opacity:.85;
+    cursor: pointer;
+}
+button.submit:active {
+    border: 1px solid #20911e;
+    box-shadow: 0 0 10px 5px #356b0b inset;
+    -webkit-box-shadow:0 0 10px 5px #356b0b inset ;
+    -moz-box-shadow: 0 0 10px 5px #356b0b inset;
+    -ms-box-shadow: 0 0 10px 5px #356b0b inset;
+    -o-box-shadow: 0 0 10px 5px #356b0b inset;
+}
+
+.reg_form input:focus, .reg_form textarea:focus { /* add this to the already existing style */
+    padding-right:70px;
+}
+
+.reg_form input, .reg_form textarea { /* add this to the already existing style */
+    -moz-transition: padding .25s;
+    -webkit-transition: padding .25s;
+    -o-transition: padding .25s;
+    transition: padding .25s;
+}
+
+.reg_form input:focus:invalid, .reg_form textarea:focus:invalid { /* when a field is considered invalid by the browser */
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535
+}
+
+.reg_form input:required:valid, .contact_form textarea:required:valid { /* when a field is considered valid by the browser */
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+
+::-webkit-validation-bubble-message {
+    padding: 1em;
+}
+
+*:focus {
+    outline: none;
+}
+
+.reg_form label{
+    font-family: Lucida, sans-serif;
+    font-size: 90%;
+    font-weight: 500;
+}
+
+.form_hint {
+    font-size: 85%;
+}
+
+.reg_form ul {
+    width:750px;
+    list-style-type:none;
+    list-style-position:outside;
+    margin:0px;
+    padding:0px;
+}
+.reg_form li{
+    padding:12px;
+    position:relative;
+}
+
+.reg_form h2 {
+    display: inline;
+}
+
+.required_notification_error {
+    color:#d45252;
+    display:inline;
+    font-size: 85%;
+}
+
+.required_notification_success{
+    color: #8bd47e;
+    display:inline;
+    font-size: 85%;
+}
+
+.reg_form label {
+    width:150px;
+    margin-top: 3px;
+    display:inline-block;
+    float:left;
+    padding:3px;
+}
+.reg_form input {
+    height:20px;
+    width:220px;
+    padding:5px 8px;
+}
+
+.reg_form button {margin-left:156px;}
+
+.reg_form input, .reg_form textarea {
+    border:1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius:2px;
+}
+.reg_form input:focus, .reg_form textarea:focus {
+    background: #fff;
+    border:1px solid #555;
+    box-shadow: 0 0 3px #aaa;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: #ded8df;
+}
+
+.body_str{
+    min-height: 90vh;
+    padding-top: 1%;
+    padding-left: 2%;
+    font-family: Lucida, sans-serif; /* Шрифт с засечками */
+    background-color: #f5f6fc;
+    text-align: start;
+}
+
+.p_con A:link{
+    text-decoration: none;
+    color: black;
+}
+
+.p_con A:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.p_con A:active{
+    text-decoration: none;
+    color: black;
+}
+
+.p_con A:hover{
+    text-decoration: none;
+    color: #c5d1e9;
+}
+
+A:visited{
+    text-decoration: none;
+}
+
+A:active{
+    text-decoration: none;
+}
+
+A:hover{
+    text-decoration: none;
+}
+
+A:link{
+    text-decoration: none;
+}

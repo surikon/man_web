@@ -4,38 +4,31 @@
         public function get_data_reg($code, $login, $password, $repass)
         {
             $b = false;
+            $result[] = array("", "", "", "", "");
             $data = DB::run("SELECT * FROM user WHERE code = ?", [$code])->fetch(); //fetchAll ????
-            if(empty($data))
-            {
-                $b = true;
-                $result = [
-                    "registration" => "Неправильный пригласительный код",
-                    "status" => "error"
-                ];
-            }
-            if(DB::run("SELECT * FROM user WHERE login = ?", [$login])->fetch())
-            {
-                $b = true;
-                $result = [
-                    "registration" => "Такой логин уже существует",
-                    "status" => "error"
-                ];
-            }
+
             if(!empty($data['status']))
             {
                 $b = true;
-                $result = [
-                    "registration" => "Вы уже зарегистрированы!",
-                    "status" => "error"
-                ];
+                $result[2] = "Вы уже зарегистрированны";
             }
-            if($repass != $password)
+            else
             {
-                $b = true;
-                $result = [
-                    "registration" => "Пароли не совпадают!",
-                    "status" => "error"
-                ];
+                if (empty($data))
+                {
+                    $b = true;
+                    $result[2] = "Неправильный пригласительный код";
+                }
+                if (DB::run("SELECT * FROM user WHERE login = ?", [$login])->fetch())
+                {
+                    $b = true;
+                    $result[3] = "Такой логин уже существует";
+                }
+                if ($repass != $password)
+                {
+                    $b = true;
+                    $result[4] = "Пароли не совпадают";
+                }
             }
 
             if(!$b)
@@ -44,12 +37,11 @@
                 DB::run("UPDATE user SET login=? WHERE code=?", [$login, $code]);
                 DB::run("UPDATE user SET password=? WHERE code=?", [$password, $code]);
                 DB::run("UPDATE user SET status=? WHERE code=?", [1, $code]);
-                $result = [
-                    "registration" => "Поздравляю! Вы успешно зарегистрировались. Для входа в личный кабинет,
-                                 используйте 'Войти'",
-                    "status" => "info"
-                ];
+                $result[1] = "success";
             }
+            else $result[1] = "error";
+
+
             return $result;
         }
     }

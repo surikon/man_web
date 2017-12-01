@@ -7,15 +7,12 @@
     width:45%
 }
 .body_str{
-    font-family: Lucida, sans-serif; /* Шрифт с засечками */
-    width: 85%;
-    padding-top: 1px;
-    padding-left: 1%;
+    width: 80vw;
 }
 
 .head1{
-    font-size: 107%; /* Размер шрифта в процентах */
-    font-family: Lucida, sans-serif; /* Шрифт с засечками */
+    font-size: 107%;
+    font-family: Lucida, sans-serif;
     font-weight: 500;
 }
 
@@ -43,4 +40,95 @@ th {
 
 .inf{
     background-color: #e2e1ff;
+}
+
+.p_con{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    width:100%;
+    background-color: #bf768b;
+    padding: 1%;
+    vertical-align: middle;
+    position: fixed;
+}
+
+
+
+.c_con{
+    font-family: Lucida, sans-serif;
+    width: 10%;
+    font-weight: 200;
+    font-size: 83%;
+    display: inline-block;
+    text-align: center;
+}
+
+.c_con_right{
+    font-family: Lucida, sans-serif;
+    width: 10%;
+    font-weight: 200;
+    font-size: 83%;
+    display: inline-block;
+    text-align: center;
+    margin-left: 58vw;
+}
+
+.logo{
+    font-family: "Brush Script MT";
+    font-size:300%;
+}
+
+.p_logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 4%;
+    padding-left: 2%;
+    padding-bottom: 1%;
+    width: 98%;
+    background-color: #bca895;
+}
+
+.c_logo{
+    font-family: Lucida, sans-serif;
+    font-weight: 200;
+    font-size: 83%;
+    text-align: center;
+}
+
+
+.body_str A{
+    color: #905f68;
+    font-family: Lucida, sans-serif;
+    font-weight: 200;
+    font-size: 90%;
+}
+
+.body_str A:hover{
+    color: #905f68;
+    text-decoration: underline;
+}
+
+
+.poster{
+    position:relative;
+}
+.message{
+    display:none;
+    margin-left: 200px;
+    padding:10px;
+    background:#f3f3f3;
+    height:150px;
+    -moz-box-shadow:0 5px 5px rgba(0,0,0,0.3);
+    -webkit-box-shadow:0 5px 5px rgba(0,0,0,0.3);
+    box-shadow:0 5px 5px rgba(0,0,0,0.3);
+}
+.poster:hover .message{
+    display:block;
+    position:absolute;
+    top:220px;
+    z-index:9999;
+    width:300px;
 }

@@ -9,20 +9,12 @@
             $user_partonymic = $data['partonymic'];
             $login = $data['login'];
 
-            $template_date = "Y-m-d G-i-s";
+            $template_date = "Y-m-d";
             $now = date($template_date);
 
-            $tasks = DB::run("SELECT * FROM tasks WHERE user_id = ?", [$id])->fetchAll();
+            $tasks = DB::run("SELECT * FROM tasks WHERE user_id = ? AND date_of_completion = ?", [$id, $now])->fetchAll();
             //Проверка, истекла дата выполнения задачи
             $size = count($tasks);
-            for ($i = 0; $i < $size; $i++)
-            {
-                if($tasks[$i]['date_of_completion'] <= $now)
-                {
-                    $task_id = $tasks[$i]['task_id'];
-                    DB::run("UPDATE tasks SET status=? WHERE task_id=?", [3, $task_id]);
-                }
-            }
 
             $result = [
                 "name" => $data['name'],

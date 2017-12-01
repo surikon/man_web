@@ -10,10 +10,7 @@
                 header("Location: http://localhost"); exit;
             }
             else {
-                $result = [
-                    "authorisation" => "Неправильный логин или пароль!",
-                    "status" => "error"
-                ];
+                $result[1] = "Неправильный логин или пароль!";
                 return $result;
             }
         }

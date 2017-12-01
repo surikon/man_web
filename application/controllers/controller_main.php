@@ -21,7 +21,7 @@
            }
            else
            {
-               session_destroy();
+               if(isset($_SESSION['id'])) session_destroy();
                $result = $this->model->news();
                $this->view->generate('main_view.php', 'template_view1.php', $result);
            }
