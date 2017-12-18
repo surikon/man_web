@@ -12,10 +12,10 @@
     <center>
         <header>
             <div class = "p_con">
-                <div class = "c_con"><a href = "http://localhost">Кабинет</a></div>
-                <div class = "c_con"><a href="http://localhost/404">Успеваемость</a></div>
-                <div class = "c_con"><a href="http://localhost/404">Чаты</a></div>
-                <div class = "c_con_right"><a href = "http://localhost/out">Выйти</a></div>
+                <div class = "c_con"><a href = "http://<?php echo $_SERVER['SERVER_NAME']; ?>">Кабинет</a></div>
+                <div class = "c_con"><a href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/404">Успеваемость</a></div>
+                <div class = "c_con"><a href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/404">Чаты</a></div>
+                <div class = "c_con_right"><a href = "http://<?php echo $_SERVER['SERVER_NAME']; ?>/out">Выйти</a></div>
             </div>
         </header>
         <div class = "p_logo">

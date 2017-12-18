@@ -3,10 +3,11 @@
     <div class = "p_ava">
         <div class = "c_ava">
             <div class = "poster">
-                <img src = "/images/temlate_ava.jpg"/>
+                <img src = <?=$result['ava'];?> width = "90%"/>
                 <div class = "message">
                     <b>Загрузка новой фотографии</b>
-                    <p>Чтобы изменить свою фотографию, перейдите в раздел <a href="http://localhost/settings">настройки</a></p>
+                    <p>Чтобы изменить свою фотографию, перейдите в раздел <a href="http://<?=$_SERVER['SERVER_NAME']?>/settings">
+                            настройки</a></p>
                 </div>
             </div>
         </div>
@@ -19,22 +20,16 @@
                         <th></th>
                     </tr>
                 <?php
-                    $size = count($result['tasks']);
-                    for ($i = 0; $i < $size; $i++)
-                    {
-                        $s = $result['tasks'][$i]['status'];
-                        if(!$s) continue;
-                        $s = ($s == 1 ? "normal" : $s == 2 ? "inf" : "alert");
-
-                        echo "<tr><td class = '$s'>".($i + 1)."</td><td class = '$s'>".
-                        $result['tasks'][$i]['name']."</td><td  class = '$s'><input type='checkbox' name = 'task' 
-                        id = '".$result['tasks'][$i]['task_id']."'></td></tr>";
-                    }
+                    if(empty($result['tasks']))
+                        echo "<h4>Нет запланированных задач</h4>";
+                    else
+                        echo $result['tasks'];
                 ?>
                 </table>
                 <br />
                 <button type = "submit" class = "submit" name = "update_tasks" form="tasks">Обновить</button>
-                <a href = "http://localhost/tasks">Перейти ко всем задачам</a>
+
+                <a href = "http:// <?=$_SERVER['SERVER_NAME']?>/tasks">Перейти ко всем задачам</a>
             </form>
         </div>
     </div>

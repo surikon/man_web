@@ -12,9 +12,9 @@
     <center>
 		<header>
 			<div class = "p_con">
-                <div class = "c_con"><a href = "http://localhost">Главная</a></div>
-                <div class = "c_con"><a href="http://localhost/in">Вход</a></div>
-                <div class = "c_con"><a href="http://localhost/register">Регистрация</a></div>
+                <div class = "c_con"><a href = "http://<?php echo $_SERVER['SERVER_NAME']; ?>">Главная</a></div>
+                <div class = "c_con"><a href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/in">Вход</a></div>
+                <div class = "c_con"><a href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/register">Регистрация</a></div>
 			</div>
 		</header>
         <div class = "p_logo">

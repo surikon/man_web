@@ -27,7 +27,7 @@ td {
 
 th {
     padding: 5px;
-    background-color: #ffb78d;
+    background-color: #bea1a1;
 }
 
 .alert{
@@ -110,7 +110,6 @@ th {
     color: #905f68;
     text-decoration: underline;
 }
-
 
 .poster{
     position:relative;

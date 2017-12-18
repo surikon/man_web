@@ -7,7 +7,7 @@
             if(md5($password) == $data['password'])
             {
                 $_SESSION['id'] = $data['id'];
-                header("Location: http://localhost"); exit;
+                header("Location: http://".$_SERVER['SERVER_NAME']); exit;
             }
             else {
                 $result[1] = "Неправильный логин или пароль!";

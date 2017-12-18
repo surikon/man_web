@@ -7,7 +7,10 @@
         }
         function action_index()
         {
-            $this->view->generate("404_view.php", "empty_template_view.php");
+            if(isset($_SESSION['id']))
+                $template = "template_view2.php";
+            else $template = "template_view1";
+            $this->view->generate("404_view.php", $template);
         }
     }
 ?>
