@@ -7,6 +7,25 @@
     <link rel = "stylesheet" type="text/css" href = "/css/ev.css">
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/core.js" type = "text/javascript"></script>
     <script src = "/js/main.js" type = "text/javascript"></script>
+    <script>
+        function collapsElement(id) {
+            if ( document.getElementById(id).style.display != "none" ) {
+                document.getElementById(id).style.display = 'none';
+            }
+            else {
+                document.getElementById(id).style.display = '';
+            }
+
+            if(document.getElementById("i" + id).innerHTML == "Читать далее...")
+            {
+                document.getElementById("i" + id).innerHTML = "Свернуть";
+            }
+            else
+            {
+                document.getElementById("i" + id).innerHTML = "Читать далее...";
+            }
+        }
+    </script>
 </head>
 <body>
     <center>

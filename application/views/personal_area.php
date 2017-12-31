@@ -2,35 +2,22 @@
     <h2>Личный кабинет</h2></br>
     <div class = "p_ava">
         <div class = "c_ava">
-            <div class = "poster">
-                <img src = <?=$result['ava'];?> width = "90%"/>
-                <div class = "message">
-                    <b>Загрузка новой фотографии</b>
-                    <p>Чтобы изменить свою фотографию, перейдите в раздел <a href="http://<?=$_SERVER['SERVER_NAME']?>/settings">
-                            настройки</a></p>
+            <div class="thumbs">
+                <img src = "<?=$result['ava'];?>" width="50%"/>
+                <div class="caption">
+                    <span class="title">Ваша аватарка</span>
+                    <span class="info"><a href = "/settings" style="font-size: 130%;">Здарова</a></span>
                 </div>
             </div>
         </div>
         <div class = "c_ava">
-            <form method="POST" action="" name = "tasks">
-                <table>
-                    <tr>
-                        <th>№</th>
-                        <th>Задача </th>
-                        <th></th>
-                    </tr>
                 <?php
-                    if(empty($result['tasks']))
-                        echo "<h4>Нет запланированных задач</h4>";
+                    if($result['bt'] == false)
+                        echo "<h4>Ура! Нет задач на сегодня.</h4>";
                     else
                         echo $result['tasks'];
                 ?>
-                </table>
-                <br />
-                <button type = "submit" class = "submit" name = "update_tasks" form="tasks">Обновить</button>
-
-                <a href = "http:// <?=$_SERVER['SERVER_NAME']?>/tasks">Перейти ко всем задачам</a>
-            </form>
+                <a href = "/tasks">Перейти ко всем задачам</a>
         </div>
     </div>
 </center>

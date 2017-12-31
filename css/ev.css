@@ -38,11 +38,11 @@ button.submit:active {
     -o-box-shadow: 0 0 10px 5px #356b0b inset;
 }
 
-.reg_form input:focus, .reg_form textarea:focus { /* add this to the already existing style */
+.reg_form input:focus[type="text"]{ /* add this to the already existing style */
     padding-right:70px;
 }
 
-.reg_form input, .reg_form textarea { /* add this to the already existing style */
+.reg_form input[type="text"] { /* add this to the already existing style */
     -moz-transition: padding .25s;
     -webkit-transition: padding .25s;
     -o-transition: padding .25s;
@@ -112,7 +112,7 @@ button.submit:active {
     float:left;
     padding:3px;
 }
-.reg_form input {
+.reg_form input{
     height:20px;
     width:220px;
     padding:5px 8px;
@@ -120,12 +120,12 @@ button.submit:active {
 
 .reg_form button {margin-left:156px;}
 
-.reg_form input, .reg_form textarea {
+.reg_form input, .reg_form textarea{
     border:1px solid #aaa;
     box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
     border-radius:2px;
 }
-.reg_form input:focus, .reg_form textarea:focus {
+.reg_form input:focus, .reg_form textarea:focus{
     background: #fff;
     border:1px solid #555;
     box-shadow: 0 0 3px #aaa;
