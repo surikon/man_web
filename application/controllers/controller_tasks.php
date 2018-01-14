@@ -22,7 +22,7 @@
             if(isset($_POST['del']))
             {
                 $tasks = $_POST['tasks'];
-                $this->model->delete_task();
+                $this->model->delete_tasks($tasks);
             }
 
             $this->view->generate('tasks_view.php', 'template_view2.php', $result);

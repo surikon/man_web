@@ -5,19 +5,17 @@
     <title>Surnachev_Nikita</title>
     <link rel = "stylesheet" type = "text/css" href = "/css/personal_area.css" />
     <link rel = "stylesheet" type="text/css" href="/css/ev.css" />
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/core.js" type = "text/javascript"></script>
     <script src = "/js/main.js" type = "text/javascript"></script>
 </head>
 <body>
     <center>
-        <header>
             <div class = "p_con">
-                <div class = "c_con"><a href = "http://<?php echo $_SERVER['SERVER_NAME']; ?>">Кабинет</a></div>
-                <div class = "c_con"><a href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/404">Успеваемость</a></div>
-                <div class = "c_con"><a href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/404">Чаты</a></div>
-                <div class = "c_con_right"><a href = "http://<?php echo $_SERVER['SERVER_NAME']; ?>/out">Выйти</a></div>
+                <div class = "c_con"><a href = "http://<?=$_SERVER['SERVER_NAME']; ?>">Кабинет</a></div>
+                <div class = "c_con"><a href="http://<?=$_SERVER['SERVER_NAME']; ?>/journal">Успеваемость</a></div>
+                <div class = "c_con"><a href="http://<?=$_SERVER['SERVER_NAME']; ?>/404">Чаты</a></div>
+                <div class = "c_con_right"><a href = "http://<?=$_SERVER['SERVER_NAME']; ?>/out">Выйти</a></div>
             </div>
-        </header>
+
         <div class = "p_logo">
             <div class = "c_logo">
                 <span class = "logo">Smart School</span>

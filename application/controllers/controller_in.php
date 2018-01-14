@@ -14,7 +14,14 @@
                 $password = $_POST['password'];
                 $result = $this->model->get_data_aut($login, $password);
             }
-            $this->view->generate('view_in.php', 'template_view1.php', $result);
+            if(!empty($result))
+            {
+                $this->view->generate('view_in.php', 'template_view1.php', $result);
+            }
+            else
+            {
+                $this->view->generate('view_in.php', 'template_view1.php');
+            }
         }
     }
 ?>

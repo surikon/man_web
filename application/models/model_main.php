@@ -26,7 +26,7 @@
             $tasks = DB::run("SELECT * FROM tasks WHERE user_id = ? AND date_of_completion = ?", [$id, $now])->fetchAll();
             $size = count($tasks);
 
-            $table = "<table><tr><th>№</th><th>Задача </th><th></th></tr>";
+            $table = "<table><tr><th>№</th><th>Задача </th></tr>";
 
             for ($i = 0; $i < $size; $i++)
             {
@@ -41,6 +41,19 @@
 
             $table .= "</table><br />";
 
+            $marks = DB::run("SELECT * FROM journal WHERE mark_id = ? AND user_id = ?", [5, $id])->fetchAll();
+            $mark_5 = count($marks);
+            $marks = DB::run("SELECT * FROM journal WHERE mark_id = ? AND user_id = ?", [4, $id])->fetchAll();
+            $mark_4 = count($marks);
+            $marks = DB::run("SELECT * FROM journal WHERE mark_id = ? AND user_id = ?", [3, $id])->fetchAll();
+            $mark_3 = count($marks);
+            $marks = DB::run("SELECT * FROM journal WHERE mark_id = ? AND user_id = ?", [2, $id])->fetchAll();
+            $mark_2 = count($marks);
+            $marks = DB::run("SELECT * FROM journal WHERE mark_id = ? AND user_id = ?", [1, $id])->fetchAll();
+            $mark_1 = count($marks);
+
+            $set_mark = $mark_1 + $mark_2 + $mark_3 + $mark_4 + $mark_5;
+
             $result = [
                 "name" => $data['name'],
                 "surname" => $data['surname'],
@@ -48,7 +61,13 @@
                 "partonymic" => $data['partonymic'],
                 "ava" => $ava_path,
                 "bt" => $b,
-                "tasks" => $table
+                "tasks" => $table,
+                "mark_5" => $mark_5,
+                "mark_4" => $mark_4,
+                "mark_3" => $mark_3,
+                "mark_2" => $mark_2,
+                "mark_1" => $mark_1,
+                "set_mark" => $set_mark
             ];
             return $result;
         }

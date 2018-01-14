@@ -17,8 +17,9 @@ class Controller_Register extends Controller
            $password = $_POST['password'];
            $repass = $_POST['repass'];
            $result = $this->model->get_data_reg($code, $login, $password, $repass);
+           $this->view->generate('register_view.php', 'template_view1.php', $result);
         }
-        $this->view->generate('register_view.php', 'template_view1.php', $result);
+        $this->view->generate('register_view.php', 'template_view1.php');
     }
 }
 ?>

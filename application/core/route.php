@@ -42,11 +42,10 @@
             $controller_file = strtolower($controller_name).'.php';
             $controller_path = "application/controllers/".$controller_file;
 
-           // echo $controller_path."<br />";
-            if(file_exists($controller_path)) 
-                {
-                    include $controller_path;
-                }
+            if(file_exists($controller_path))
+            {
+                include $controller_path;
+            }
             else
             {
                 Route::ErrorPage404();

@@ -3,10 +3,10 @@
     <div class = "p_ava">
         <div class = "c_ava">
             <div class="thumbs">
-                <img src = "<?=$result['ava'];?>" width="50%"/>
+                <img src = "<?=$result['ava'];?>" />
                 <div class="caption">
                     <span class="title">Ваша аватарка</span>
-                    <span class="info"><a href = "/settings" style="font-size: 130%;">Здарова</a></span>
+                    <span class="info"><a href = "/settings" style="font-size: 130%;">Изменить аватрарку</a></span>
                 </div>
             </div>
         </div>
@@ -20,4 +20,30 @@
                 <a href = "/tasks">Перейти ко всем задачам</a>
         </div>
     </div>
+</center>
+
+<center>
+    <br />
+    <?php
+        if($result['set_mark'] != 0)
+        {
+            echo "<hr /><h3>Круговая диаграма успеваемости: </h3>";
+            echo '<div class = "grf"><canvas id = "myCanvas"></canvas><div id="myLegend"></div></div>';
+        }
+    ?>
+    <br />
+    <script>
+        var myMarks = {
+            <?php
+                if($result['mark_5']) echo '"5" : '. $result['mark_5'] . ",";
+                if($result['mark_4']) echo '"4" : '. $result['mark_4'] . ",";
+                if($result['mark_3']) echo '"3" : '. $result['mark_3'] . ",";
+                if($result['mark_2']) echo '"2" : '. $result['mark_2'] . ",";
+                if($result['mark_1']) echo '"1" : '. $result['mark_1'] . ",";
+            ?>
+        };
+    </script>
+    <script src = "/js/diagram.js" type = "text/javascript"></script>
+    <hr />
+      <br />
 </center>

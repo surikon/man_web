@@ -51,7 +51,6 @@ th {
     background-color: #bf768b;
     padding: 1%;
     vertical-align: middle;
-    position: fixed;
 }
 
 
@@ -61,7 +60,6 @@ th {
     width: 10%;
     font-weight: 200;
     font-size: 83%;
-    display: inline-block;
     text-align: center;
 }
 
@@ -112,7 +110,7 @@ th {
 }
 
 .thumbs {
-    width: 100%;
+    width: 80%;
     max-width: 450px; /* опционально */
     margin: 10px;
     opacity: .99;
@@ -133,19 +131,14 @@ th {
     opacity: 0;
     position: absolute;
     top: 100%;
-    left: 0;
-    z-index: 2;
     -webkit-transition-property: top, opacity;
     transition-property: top, opacity;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
 .thumbs img {
-    display: block;
     width: 100%; /* ширина картинки */
     height: auto; /* высота картинки */
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
 }
 .thumbs .caption {
     width: 100%;
@@ -198,3 +191,11 @@ th {
     -webkit-transition-delay: 0.25s;
     transition-delay: 0.25s;
 }
+
+.grf
+{
+    width:100%;
+    text-align: left;
+    padding-left: 25%;
+}
+

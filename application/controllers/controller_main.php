@@ -9,7 +9,7 @@
 
         function action_index()
         {
-           if(isset($_SESSION['id']) && $_SESSION['out'] != 1)
+           if(isset($_SESSION['id']) && !isset($_SESSION['out']))
            {
                if(isset($_GET['update_tasks']))
                {

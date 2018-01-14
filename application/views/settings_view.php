@@ -1,6 +1,7 @@
 <a href = "../"><-Назад</a>
 <br /><br />
-<img src="<?=$result['ava'];?>" width = "50%"/>
+<center>
+<img src="<?=$result['ava'];?>" width = "40%"/>
 <br />
 <br />
 
@@ -8,9 +9,9 @@
     <input type="file" id = "file" name = "file" multiple/> <br /> <br />
     <input type="submit" name = "update_ava" placeholder="Send"/>
 </form>
-
+</center>
 <br />
 <?php
-    echo $result['error'];
-    echo $result['success'];
+    if(!empty($result['error']))echo $result['error'];
+    if(!empty($result['error']))echo $result['success'];
 ?>

@@ -5,7 +5,6 @@
     <title>Surnachev_Nikita</title>
     <link rel = "stylesheet" type = "text/css" href = "/css/land_page.css" />
     <link rel = "stylesheet" type="text/css" href = "/css/ev.css">
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/core.js" type = "text/javascript"></script>
     <script src = "/js/main.js" type = "text/javascript"></script>
     <script>
         function collapsElement(id) {

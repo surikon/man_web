@@ -35,7 +35,7 @@
             }
 
             $today_tasks_html .= "</table><br />";
-            $all_tasks_html .= "</table><br /><button type = 'submit' class = 'submit' name = 'del' form='delete_task'>Удалить</button></form>";
+            $all_tasks_html .= "</table><br /><button type = 'submit' class = 'submit' name = 'del' form='delete_task' value='1'>Удалить</button></form>";
             $result['today'] = $today_tasks_html;
             $result['all'] = $all_tasks_html;
             $result['all_b'] = $b1;
@@ -50,12 +50,12 @@
             $query = "INSERT INTO tasks (user_id, date_of_creation, date_of_completion, name, description,status) VALUES (?,?,?,?,?,3)";
             $stmt = DB::run($query, [$user_id, $now, $date, $name, $description]);
         }
-        public function delete_task($user_id, $arr_tasks)
+        public function delete_tasks($tasks)
         {
-            $N = count($arr_tasks);
-            for($i = 0; $i < )
+            $c = count($tasks);
+            for($i = 0; $i < $c; $i++)
             {
-
+                DB::run("DELETE FROM tasks WHERE task_id = ?", [$tasks[$i]]);
             }
         }
     }
