@@ -8,7 +8,6 @@
 
             $routes = explode('/', $_SERVER['REQUEST_URI']); 
 
-
             if($routes[1] == 'out')
             {
                 $_SESSION['out'] = 1;
@@ -32,7 +31,6 @@
             $model_file = strtolower($model_name).'.php';
             $model_path = "application/models/".$model_file;
 
-           // echo $model_path."<br />";
             if(file_exists($model_path)) 
             {
                 include  $model_path;

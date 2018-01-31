@@ -8,7 +8,10 @@
         }
         function action_index()
         {
-            $this->view->generate('register_view.php', 'template_view1.php');
+            if(isset($_SESSION['id'])) {
+                $id = $_SESSION['id'];
+                $result = $this->model->get_marks($id);
+                $this->view->generate("journal_view.php", "template_view2.php", $result);
+            }
         }
     }
-?>

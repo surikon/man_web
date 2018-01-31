@@ -35,11 +35,10 @@
     <script>
         var myMarks = {
             <?php
-                if($result['mark_5']) echo '"5" : '. $result['mark_5'] . ",";
-                if($result['mark_4']) echo '"4" : '. $result['mark_4'] . ",";
-                if($result['mark_3']) echo '"3" : '. $result['mark_3'] . ",";
                 if($result['mark_2']) echo '"2" : '. $result['mark_2'] . ",";
-                if($result['mark_1']) echo '"1" : '. $result['mark_1'] . ",";
+                if($result['mark_3']) echo '"3" : '. $result['mark_3'] . ",";
+                if($result['mark_4']) echo '"4" : '. $result['mark_4'] . ",";
+                if($result['mark_5']) echo '"5" : '. $result['mark_5'] . ",";
             ?>
         };
     </script>

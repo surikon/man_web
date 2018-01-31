@@ -1,9 +1,9 @@
 <?php
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'kurokajy_surik');
-define('DB_USER', 'kurocajy_alex');
-define('DB_PASS', "\$HMEc'dU\$\"Ck0;xm:=lWtY\\m,FgnC\\#ilvZ8J:9LZ'%85lBH");
-define('DB_CHAR', 'utf8');
+define("DB_USER", 'root');
+define("DB_NAME", 'man_db');
+define("DB_PASS", "aa08072003");
+define("DB_CHAR", "utf8");
 
 class DB
 {

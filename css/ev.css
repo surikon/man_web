@@ -200,6 +200,62 @@ A:link{
 
 hr{
     width: 80%;
-
 }
+
+.tbl_journal {
+     border-collapse: collapse;
+     width: 100%;
+ }
+
+.journal>th, td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.tbl_journal tr:nth-child(even)
+{
+    background-color: #ffc4fc;
+}
+
+.journal
+{
+    overflow-x: auto;
+    width: 98%;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted #4e4e4e;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 160%;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
 

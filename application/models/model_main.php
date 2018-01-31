@@ -41,15 +41,15 @@
 
             $table .= "</table><br />";
 
-            $marks = DB::run("SELECT * FROM journal WHERE mark_id = ? AND user_id = ?", [5, $id])->fetchAll();
+            $marks = DB::run("SELECT * FROM journal WHERE mark_id = ? AND pupil_id = ?", [5, $id])->fetchAll();
             $mark_5 = count($marks);
-            $marks = DB::run("SELECT * FROM journal WHERE mark_id = ? AND user_id = ?", [4, $id])->fetchAll();
+            $marks = DB::run("SELECT * FROM journal WHERE mark_id = ? AND pupil_id = ?", [4, $id])->fetchAll();
             $mark_4 = count($marks);
-            $marks = DB::run("SELECT * FROM journal WHERE mark_id = ? AND user_id = ?", [3, $id])->fetchAll();
+            $marks = DB::run("SELECT * FROM journal WHERE mark_id = ? AND pupil_id = ?", [3, $id])->fetchAll();
             $mark_3 = count($marks);
-            $marks = DB::run("SELECT * FROM journal WHERE mark_id = ? AND user_id = ?", [2, $id])->fetchAll();
+            $marks = DB::run("SELECT * FROM journal WHERE mark_id = ? AND pupil_id = ?", [2, $id])->fetchAll();
             $mark_2 = count($marks);
-            $marks = DB::run("SELECT * FROM journal WHERE mark_id = ? AND user_id = ?", [1, $id])->fetchAll();
+            $marks = DB::run("SELECT * FROM journal WHERE mark_id = ? AND pupil_id = ?", [1, $id])->fetchAll();
             $mark_1 = count($marks);
 
             $set_mark = $mark_1 + $mark_2 + $mark_3 + $mark_4 + $mark_5;
