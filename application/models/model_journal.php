@@ -3,6 +3,11 @@
     {
         public function get_marks($user_id)
         {
+            $template_date = "Y-m-d";
+            $now = date($template_date);
+            $query = "SELECT * FROM quater WHERE start < ? AND ending > ?";
+            $quater = DB::run($query, [$now, $now])->fetch();
+
             $query = "SELECT * FROM pupil WHERE pupil_id = ?";
             $pupil = DB::run($query, [$user_id])->fetch();
             $form = $pupil['form'];
@@ -11,41 +16,30 @@
             $subjects = DB::run($query, [$form])->fetchAll();
 
             $size = count($subjects);
-            $query = "SELECT * FROM journal WHERE subject_id = ?";
+            $query = "SELECT * FROM journal WHERE subject_id = ? AND date < ? AND date > ?";
 
             $header = '<div class = "journal"><table class= "tbl_journal"><tr><th></th>';
-            $eljur = "";
             $allmarks = 0;
+            $isHeader = false;
 
             $max_marks = 0;
 
             for($i = 0; $i < $size; $i++)
             {
-                $marks = DB::run($query, [$subjects[$i]['id']])->fetchAll();
+                $marks = DB::run($query, [$subjects[$i]['id'], $quater['ending'], $quater['start']])->fetchAll();
                 $marks_n = count($marks);
                 $max_marks = max($max_marks, $marks_n);
 
-                if(empty($marks_n)) continue;
+                if(empty($marks_n))
+                {
+                    $sr[$subjects[$i]['id']] = "";
+                    $arr[$subjects[$i]['id']] = 0;
+                    continue;
+                }
 
                 $allmarks += $marks_n; //количество ВСЕХ оценок за все предметы
                 $sum_marks = $y = 0;
-                $subject_marks = "";
-
-              //  for($j = 0; $j < )
-            }
-
-
-            for($i = 0; $i < $size; $i++)
-            {
-                $marks = DB::run($query, [$subjects[$i]['id']])->fetchAll();
-                $marks_n = count($marks);
-                $max_marks = max($max_marks, $marks_n);
-
-                if(empty($marks_n)) continue;
-
-                $allmarks += $marks_n;
-                $sum_marks = $y = 0;
-                $subject_marks = "";
+                $subject_marks = " ";
 
                 for($j = 0; $j < $marks_n; $j++)
                 {
@@ -67,24 +61,44 @@
                         $sum_marks += $marks[$j]['mark_id'];
                     }
 
-                    $header .= '<th></th>';
-                    $subject_marks .= '<td> <div class="tooltip">' . $marks[$j]['mark_id'] . $mark_type . '<span class="tooltiptext">'
-                        . $marks[$j]['date'] . '</span></div></td>';
+                    $arr[$subjects[$i]['id']][$j]['mark'] = $marks[$j]['mark_id'] . $mark_type;
+                    $arr[$subjects[$i]['id']][$j]['date'] = $marks[$j]['date'];
                 }
-
-                $eljur .= '<tr><td>' . $subjects[$i]['name'] . ' (' . $sum_marks / $y . ')</td>';
-                $eljur .= $subject_marks;
-                $eljur .= '</tr>';
+                $sr[$subjects[$i]['id']] = $sum_marks / $y;
             }
 
-            $header .= '</tr>';
-            $eljur .= '</table></div>';
+    //****************************************************************************************************************
+            $size = count($subjects);
+            for($i = 0; $i < $size; $i++)
+            {
+               // if(empty($arr[$subjects[$i]['id']])) continue;
 
-            $eljur = $header . $eljur;
+                $subject_marks .= '<tr><td>' . $subjects[$i]['name'] . ' (' . $sr[$subjects[$i]['id']] . ')</td>';
 
-            $result['eljur'] = $eljur;
+                for($j = 0; $j < $max_marks; $j++)
+                {
+                    if(!$isHeader)
+                    {
+                        $header .= "<th></th>";
+                    }
+                    if($j >= count($arr[$subjects[$i]['id']]))
+                    {
+                        $subject_marks .= '<td></td>';
+                    }
+                    else
+                    {
+                        $subject_marks .= '<td> <div class="tooltip">' . $arr[$subjects[$i]['id']][$j]['mark'] . '<span class="tooltiptext">'
+                            . $arr[$subjects[$i]['id']][$j]['date'] . '</span></div></td>';
+                    }
+                }
+                $isHeader = true;
+                $header .= '</tr>';
+                $subject_marks .= '</tr>';
+            }
+
+            $result['eljur'] = $header . $subject_marks . '</table></div>';
             $result['marks'] = $allmarks;
-
+            $result['quater'] = $quater['number'];
             return $result;
         }
     }

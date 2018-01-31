@@ -6,8 +6,8 @@
             $query = 'SELECT * FROM tasks WHERE user_id=?';
             $data = DB::run($query, [$user_id])->fetchAll();
             $count_tasks = count($data);
-            $all_tasks_html = "<form method='POST' action='' name = 'delete_task' id = 'delete_task'><table><tr><th>№</th><th>Задача </th><th></th></tr>";
-            $today_tasks_html = "<table><tr><th>№</th><th>Задачи на сегодня </th></tr>";
+            $all_tasks_html = "<form method='POST' action='' name = 'delete_task' id = 'delete_task'><table><tr><th>№</th><th>Напоминания </th><th></th></tr>";
+            $today_tasks_html = "<table><tr><th>№</th><th>Напоминания на сегодня </th></tr>";
             $template_date = "Y-m-d";
             $now = date($template_date);
             $b1 = false; $b2 = false;

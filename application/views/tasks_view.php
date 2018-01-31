@@ -36,7 +36,7 @@
             </li>
             <li>
                 <label for = "password">Описание: </label>
-                <textarea rows = "5" cols = "31" class = "edit_input" name = "description"></textarea>
+                <textarea rows = "5" cols = "27" class = "edit_input" name = "description"></textarea>
             </li>
             <li>
                 <label for = "date">Дата выполнения: </label>

@@ -91,8 +91,8 @@ var Piechart = function(options){
 var myCanvas = document.getElementById("myCanvas");
 var myLegend = document.getElementById("myLegend");
 
-myCanvas.style.width = "50%";
-myCanvas.style.height = "60%";
+myCanvas.style.width = "40%";
+myCanvas.style.height = "40%";
 
 var ctx = myCanvas.getContext("2d");
 

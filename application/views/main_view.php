@@ -1,5 +1,5 @@
 <center>
-        <h2>Главная</h2>
+        <h2>Новости</h2>
 </center>
         <?=$result['news']; ?>
 

@@ -26,7 +26,7 @@
             $tasks = DB::run("SELECT * FROM tasks WHERE user_id = ? AND date_of_completion = ?", [$id, $now])->fetchAll();
             $size = count($tasks);
 
-            $table = "<table><tr><th>№</th><th>Задача </th></tr>";
+            $table = "<table><tr><th>№</th><th>Напоминание </th></tr>";
 
             for ($i = 0; $i < $size; $i++)
             {
