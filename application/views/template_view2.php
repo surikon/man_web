@@ -19,17 +19,20 @@
 
         <div class = "p_logo">
             <div class = "c_logo">
-                <span class = "logo">Smart School</span>
+                <img src="/images/logo.png" style="width: 80%"/>
+            </div>
+            <div class= "c_logo">
+                <a href = "http://<?=$_SERVER['SERVER_NAME'];?>/climate_control">Климат-контроль</a>
             </div>
         </div>
 
         <div class="container">
             <div id="sidebar">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Explore</a></li>
-                    <li><a href="#">Users</a></li>
-                    <li><a href="#">Sign Out</a></li>
+                    <li><a href="http://<?=$_SERVER['SERVER_NAME'];?>/settings">Настройки</a></li>
+                    <li><a href="">Портфолио </a></li>
+                    <li><a href="">Еще что-то</a></li>
+                    <li><a href="">Еще что-то</a></li>
                 </ul>
             </div>
             <div class="main-content">
@@ -40,9 +43,9 @@
                     <span class="bar"></span>
                 </a>
 
-            <div class = "body_str">
-                <?php include 'application/views/'.$content_view; ?>
-            </div>
+                <div class = "body_str">
+                    <?php include 'application/views/'.$content_view; ?>
+                </div>
             </div>
         </div>
     </center>

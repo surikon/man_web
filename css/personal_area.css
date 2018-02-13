@@ -42,19 +42,6 @@ th {
     background-color: #e2e1ff;
 }
 
-.p_con{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-    width:98%;
-    background-color: #bf768b;
-    padding: 1%;
-    vertical-align: middle;
-}
-
-
-
 .c_con{
     font-family: Lucida, sans-serif;
     width: 10%;
@@ -93,29 +80,30 @@ th {
     font-family: Lucida, sans-serif;
     font-weight: 200;
     font-size: 83%;
-    text-align: center;
+    text-align: left;
+    display: inline-block;
+    width: 15%;
+    justify-content: flex-start;
 }
 
 
 .body_str A{
-    color: #905f68;
+    color: rgb(31,41,43);
     font-family: Lucida, sans-serif;
     font-weight: 200;
     font-size: 90%;
 }
 
 .body_str A:hover{
-    color: #905f68;
+    color: rgb(31,41,43);
     text-decoration: underline;
 }
-
 .grf
 {
     width: 100%;
     text-align: left;
     padding-left: 10%;
 }
-
 body, html {
     margin: 0;
 
@@ -163,21 +151,21 @@ body, html {
     text-decoration: none;
     display: block;
     color:black;
-    border-bottom: 1px solid #C9223D;
+    border-bottom: 1px solid rgb(31,41,43);
     -webkit-transition:  background 0.3s ease-in-out;
     -moz-transition:  background 0.3s ease-in-out;
     -ms-transition:  background 0.3s ease-in-out;
     -o-transition:  background 0.3s ease-in-out;
     transition:  background 0.3s ease-in-out;
-    background-color: #d48aaf;
+    background-color: rgb(173,194,163);
 }
 #sidebar ul li:hover a {
-    background: #C9223D;
+    background: rgb(205,223,185);
 }
 .main-content {
     width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 5px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     position: relative;
@@ -196,7 +184,7 @@ body, html {
     line-height: 160%;
 }
 .main-content #sidebar-toggle {
-    background: #DF314D;
+    background: rgb(31,41,43);
     border-radius: 3px;
     display: block;
     position: relative;
@@ -208,9 +196,18 @@ body, html {
     width: 18px;
     margin-bottom: 3px;
     height: 2px;
-    background-color: #ff919f;
+    background-color: rgb(173,194,163);
     border-radius: 1px;
 }
 .main-content #sidebar-toggle .bar:last-child{
     margin-bottom: 0;
+}
+
+.marks{
+    font-size: large;
+}
+
+.my_marks_diagram
+{
+    font-size: small;
 }

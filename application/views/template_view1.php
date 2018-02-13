@@ -37,7 +37,18 @@
 		</header>
         <div class = "p_logo">
             <div class = "c_logo">
-                <span class = "logo">Smart School</span>
+                <img src="/images/logo.png" style="width: 50%"/>
+            </div>
+            <div class= "c_logo">
+                <p>Поддержка: nikita.surnachev03@gmail.com</p><p>или +79782568334</p>
+            </div>
+            <div class = "c_logo"></div>
+            <div class = "c_logo"></div>
+            <div class = "c_logo">
+                <img src="/images/icons/facebook.png" style="width: 12%">
+                <img src="/images/icons/vk.png" style="width: 12%">
+                <img src="/images/icons/skype.png" style="width: 12%">
+                <img src="/images/icons/telegram.png" style="width: 12%">
             </div>
         </div>
     <div class = "body_str">

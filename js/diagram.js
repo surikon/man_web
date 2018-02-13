@@ -58,7 +58,7 @@ var Piechart = function(options){
             color_index = 0;
             var legendHTML = "";
             for (categ in this.options.data){
-                legendHTML += "<div><span style='display:inline-block;width:20px;background-color:"+this.colors[color_index++]+";'>&nbsp;</span> "+categ+"</div>";
+                legendHTML += "<div class='my_marks_diagram'><span style='display:inline-block;width:20px;background-color:"+this.colors[color_index++]+";'>&nbsp;</span> "+categ+"</div>";
             }
             this.options.legend.innerHTML = legendHTML;
         }
@@ -105,5 +105,3 @@ var myPiechart = new Piechart(
     }
 );
 myPiechart.draw();
-
-

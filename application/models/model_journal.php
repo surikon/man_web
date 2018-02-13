@@ -5,8 +5,15 @@
         {
             $template_date = "Y-m-d";
             $now = date($template_date);
+
+            $query = "SELECT * FROM user WHERE id = ?";
+            $user = DB::run($query, [$user_id])->fetch();
+            $result['name'] = $user['name'];
+            $result['surname'] = $user['surname'];
+
             $query = "SELECT * FROM quater WHERE start < ? AND ending > ?";
             $quater = DB::run($query, [$now, $now])->fetch();
+          //  print_r($quater);
 
             $query = "SELECT * FROM pupil WHERE pupil_id = ?";
             $pupil = DB::run($query, [$user_id])->fetch();
@@ -58,6 +65,7 @@
                     else
                     {
                         $y++;
+                        $mark_type = "";
                         $sum_marks += $marks[$j]['mark_id'];
                     }
 

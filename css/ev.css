@@ -134,7 +134,7 @@ button.submit:active {
 html, body {
     padding: 0;
     margin: 0;
-    background-color: #ded8df;
+    background-color: rgb(123,161,150);
 }
 
 .body_str{
@@ -142,8 +142,19 @@ html, body {
     padding-top: 1%;
     padding-left: 2%;
     font-family: Lucida, sans-serif; /* Шрифт с засечками */
-    background-color: #f5f6fc;
+    background-color: rgb(195,255,206);
     text-align: start;
+}
+
+.p_con{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    width:98%;
+    background-color: rgb(123,161,150);
+    padding: 1%;
+    vertical-align: middle;
 }
 
 .p_con A:link{
@@ -182,11 +193,6 @@ A:link{
     text-decoration: none;
 }
 
-.logo{
-    font-family: "Brush Script MT";
-    font-size:300%;
-}
-
 .p_logo{
     display: flex;
     justify-content: flex-start;
@@ -195,7 +201,27 @@ A:link{
     padding-left: 2%;
     padding-bottom: 1%;
     width: 98%;
-    background-color: #bca895;
+    background-color: rgb(205,223,185);
+}
+
+.p_logo A:link{
+    text-decoration: none;
+    color: black;
+}
+
+.p_logo A:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.p_logo A:active{
+    text-decoration: none;
+    color: black;
+}
+
+.p_logo A:hover{
+    text-decoration: none;
+    color: #818798;
 }
 
 hr{

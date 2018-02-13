@@ -1,7 +1,6 @@
-<a href = "../"><-Назад</a>
-<br /><br />
-<center>
-<img src="<?=$result['ava'];?>" width = "40%"/>
+<h3>Изменить аватарку</h3>
+<hr /> <br />
+<img src="<?=$result['ava'];?>" width = "20%"/>
 <br />
 <br />
 
@@ -9,7 +8,7 @@
     <input type="file" id = "file" name = "file" multiple/> <br /> <br />
     <input type="submit" name = "update_ava" placeholder="Send"/>
 </form>
-</center>
+
 <br />
 <?php
     if(!empty($result['error']))echo $result['error'];

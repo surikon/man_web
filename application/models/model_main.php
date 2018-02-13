@@ -26,7 +26,7 @@
             $tasks = DB::run("SELECT * FROM tasks WHERE user_id = ? AND date_of_completion = ?", [$id, $now])->fetchAll();
             $size = count($tasks);
 
-            $table = "<table><tr><th>№</th><th>Напоминание </th></tr>";
+            $table = "<table><tr><th>№</th><th>Напоминания </th></tr>";
 
             for ($i = 0; $i < $size; $i++)
             {
@@ -74,7 +74,7 @@
 
         function news()
         {
-            $query = "SELECT * FROM news WHERE type=?";
+            $query = "SELECT * FROM news WHERE type = ?";
             $news = DB::run($query, [1])->fetchAll();
             $size = count($news);
             $result['news'] = "";

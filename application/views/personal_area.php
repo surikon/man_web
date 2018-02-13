@@ -1,8 +1,11 @@
 <center>
-    <h2>Личный кабинет</h2></br>
+    <p style="font-size: 20px; font-weight: 500"><?=$result['name'] . " " . $result['surname'];?></p>
+    <br /><br />
     <div class = "p_ava">
         <div class = "c_ava">
-            <img src = "<?=$result['ava'];?>" style="width: 50%"/>
+            <div class = "image_view">
+                <img src = "<?=$result['ava'];?>" style="width: 50%"/>
+            </div>
         </div>
         <div class = "c_ava">
                 <?php
@@ -21,7 +24,7 @@
     <?php
         if($result['set_mark'] != 0)
         {
-            echo "<hr /><center><h3>Рейтинги: </h3></center>";
+            echo "<hr /><center><p style='font-size: 20px; font-weight: 500'>Рейтинги: </p></center>";
             echo '<div class = "grf"><canvas id = "myCanvas"></canvas><div id="myLegend"></div></div>';
         }
     ?>
@@ -29,10 +32,10 @@
     <script>
         var myMarks = {
             <?php
-                if($result['mark_2']) echo '"<b>2</b>" : '. $result['mark_2'] . ",";
-                if($result['mark_3']) echo '"<b>3</b>" : '. $result['mark_3'] . ",";
-                if($result['mark_4']) echo '"<b>4</b>" : '. $result['mark_4'] . ",";
-                if($result['mark_5']) echo '"<b>5</b>" : '. $result['mark_5'] . ",";
+                if($result['mark_2']) echo '"Оценка: <b>2</b>" : '. $result['mark_2'] . ",";
+                if($result['mark_3']) echo '"Оценка: <b>3</b>" : '. $result['mark_3'] . ",";
+                if($result['mark_4']) echo '"Оценка: <b>4</b>" : '. $result['mark_4'] . ",";
+                if($result['mark_5']) echo '"Оценка: <b>5</b>" : '. $result['mark_5'] . ",";
             ?>
         };
     </script>
