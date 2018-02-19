@@ -15,6 +15,7 @@ class Controller_Climate_control extends Controller
     }
     function action_index()
     {
-
+        $result = $this->model->get_data();
+        $this->view->generate("climate_control_view.php", "template_view2.php", $result);
     }
 }
