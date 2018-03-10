@@ -5,7 +5,7 @@
     <title>Surnachev_Nikita</title>
     <link rel = "stylesheet" type = "text/css" href = "/css/personal_area.css" />
     <link rel = "stylesheet" type="text/css" href="/css/ev.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src = "/js/main.js" type = "text/javascript"></script>
 </head>
 <body>
@@ -13,7 +13,7 @@
             <div class = "p_con">
                 <div class = "c_con"><a href = "http://<?=$_SERVER['SERVER_NAME']; ?>">Кабинет</a></div>
                 <div class = "c_con"><a href="http://<?=$_SERVER['SERVER_NAME']; ?>/journal">Журнал</a></div>
-                <div class = "c_con"><a href="http://<?=$_SERVER['SERVER_NAME']; ?>/404">Чаты</a></div>
+                <div class = "c_con"><a href="http://<?=$_SERVER['SERVER_NAME']; ?>/chat">Чаты</a></div>
                 <div class = "c_con_right"><a href = "http://<?=$_SERVER['SERVER_NAME']; ?>/out">Выйти</a></div>
             </div>
 

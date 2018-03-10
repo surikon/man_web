@@ -19,7 +19,7 @@
 table {
     width: 100%; /* Ширина таблицы */
     border-spacing: 1px; /* Расстояние между ячейками */
-    background-color: #f9f8fa;
+    background-color: rgb(205,223,185);
 }
 td {
     padding: 5px; /* Поля вокруг текста */
@@ -27,11 +27,11 @@ td {
 
 th {
     padding: 5px;
-    background-color: #bea1a1;
+    background-color: rgb(123,161,150);
 }
 
 .alert{
-    background-color: #fae4e4;
+    background-color: white;
 }
 
 .normal{
@@ -210,4 +210,35 @@ body, html {
 .my_marks_diagram
 {
     font-size: small;
+}
+
+.screen {
+    width: 90%;
+    padding: 3%;
+    border: 1px solid rgb(31,41,43);
+    border-radius: 10px 10px;
+    height: 300px;
+    overflow-y:scroll;
+}
+
+.chat_input input[type = "text"]
+{
+    width: 60%;
+    min-height: 20px;
+}
+
+.text_chat_message
+{
+    padding-top: 20%;
+}
+
+.text_chat_name
+{
+    font-weight: 600;
+    padding-bottom: 20%;
+}
+
+.text_chat_date
+{
+
 }

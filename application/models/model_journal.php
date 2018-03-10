@@ -13,7 +13,6 @@
 
             $query = "SELECT * FROM quater WHERE start < ? AND ending > ?";
             $quater = DB::run($query, [$now, $now])->fetch();
-          //  print_r($quater);
 
             $query = "SELECT * FROM pupil WHERE pupil_id = ?";
             $pupil = DB::run($query, [$user_id])->fetch();
@@ -77,6 +76,8 @@
 
     //****************************************************************************************************************
             $size = count($subjects);
+            $subject_marks = "";
+
             for($i = 0; $i < $size; $i++)
             {
                // if(empty($arr[$subjects[$i]['id']])) continue;

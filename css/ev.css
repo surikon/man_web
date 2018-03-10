@@ -1,13 +1,13 @@
 button.submit {
-    background-color: #bf768b;
-    background: -webkit-gradient(linear, left top, left bottom, from(#bf768b), to(#bf6e85));
-    background: -webkit-linear-gradient(top, #bf768b, #bf6b82);
-    background: -moz-linear-gradient(top, #bf768b, #915773);
-    background: -ms-linear-gradient(top, #bf768b, #bf6b7e);
-    background: -o-linear-gradient(top, #bf768b, #bf6a82);
-    background: linear-gradient(top, #bf768b, #bf6b82);
-    border: 1px solid #bf768b;
-    border-bottom: 1px solid #bf768b;
+    background-color: rgb(123,161,150);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(123,161,150)), to(rgb(73, 154, 161)));
+    background: -webkit-linear-gradient(top,  rgb(123,161,150), rgb(109, 161, 151));
+    background: -moz-linear-gradient(top,  rgb(123,161,150), rgb(38, 161, 118));
+    background: -ms-linear-gradient(top,  rgb(123,161,150), rgb(86, 161, 135));
+    background: -o-linear-gradient(top,  rgb(123,161,150), rgb(45, 161, 144));
+    background: linear-gradient(top,  rgb(123,161,150), rgb(73, 160, 161));
+    border:  rgb(123,161,150);
+    border-bottom:  rgb(123,161,150);
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -241,7 +241,7 @@ hr{
 
 .tbl_journal tr:nth-child(even)
 {
-    background-color: #ffc4fc;
+    background-color: rgb(218, 223, 212);
 }
 
 .journal
@@ -283,5 +283,4 @@ hr{
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
-
 

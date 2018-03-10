@@ -9,7 +9,6 @@
         function action_index()
         {
             $id = $_SESSION['id'];
-            $result = $this->model->get_tasks($id);
 
             if(isset($_POST['add']))
             {
@@ -19,11 +18,13 @@
                 $this->model->add_task($id, $task_name, $task_description, $task_date);
             }
 
-            if(isset($_POST['del']))
+            if(isset($_POST['del']) && !empty($_POST['tasks']))
             {
                 $tasks = $_POST['tasks'];
                 $this->model->delete_tasks($tasks);
             }
+
+            $result = $this->model->get_tasks($id);
 
             $this->view->generate('tasks_view.php', 'template_view2.php', $result);
         }

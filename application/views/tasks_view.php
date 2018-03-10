@@ -6,7 +6,7 @@
                     echo $result['all'];
                 }
                 else{
-                    echo "<h4>Нет задач!</h4>";
+                    echo "<h4>Нет напоминаний!</h4>";
                 }
             ?>
         </div>
@@ -16,7 +16,7 @@
                     echo $result['today'];
                 }
                 else{
-                    echo "<h4>Нет задач на сегодня!</h4>";
+                    echo "<h4>Нет напоминаний на сегодня!</h4>";
                 }
             ?>
         </div>
@@ -26,7 +26,7 @@
     <form method="POST" action = "" name = "add_tasks" class = "reg_form" id = "add_tasks">
         <ul>
             <li>
-                <h4>Добавить задачу:</h4>
+                <h4>Добавить напоминание:</h4>
                 <hr />
             </li>
             <li>
