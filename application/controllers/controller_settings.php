@@ -16,11 +16,6 @@
             {
                 $file = $_FILES['file'];
                 $result = $this->model->settings($id, $file);
-                if(empty($result['error']))
-                {
-                    header("Location: http://".$_SERVER['SERVER_NAME']."/");
-                    exit;
-                }
             }
             else
             {

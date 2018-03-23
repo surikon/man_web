@@ -97,7 +97,7 @@
                     else
                     {
                         $subject_marks .= '<td> <div class="tooltip">' . $arr[$subjects[$i]['id']][$j]['mark'] . '<span class="tooltiptext">'
-                            . $arr[$subjects[$i]['id']][$j]['date'] . '</span></div></td>';
+                            . date("d.m.Y", strtotime($arr[$subjects[$i]['id']][$j]['date'])) . '</span></div></td>';
                     }
                 }
                 $isHeader = true;

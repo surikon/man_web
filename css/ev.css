@@ -38,11 +38,11 @@ button.submit:active {
     -o-box-shadow: 0 0 10px 5px #356b0b inset;
 }
 
-.reg_form input:focus[type="text"]{ /* add this to the already existing style */
+.reg_form input:focus[type="text"], .reg_form input:focus[type="password"]{ /* add this to the already existing style */
     padding-right:70px;
 }
 
-.reg_form input[type="text"] { /* add this to the already existing style */
+.reg_form input:focus[type="text"], .reg_form input:focus[type="password"]{ /* add this to the already existing style */
     -moz-transition: padding .25s;
     -webkit-transition: padding .25s;
     -o-transition: padding .25s;
@@ -112,7 +112,7 @@ button.submit:active {
     float:left;
     padding:3px;
 }
-.reg_form input{
+.reg_form input[type="text"], input[type="password"]{
     height:20px;
     width:220px;
     padding:5px 8px;

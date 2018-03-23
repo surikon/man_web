@@ -19,7 +19,9 @@ class Controller_Register extends Controller
            $result = $this->model->get_data_reg($code, $login, $password, $repass);
            $this->view->generate('register_view.php', 'template_view1.php', $result);
         }
-        $this->view->generate('register_view.php', 'template_view1.php');
+        else {
+            $this->view->generate('register_view.php', 'template_view1.php');
+        }
     }
 }
 ?>

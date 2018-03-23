@@ -1,3 +1,4 @@
+<h3>Чат сласса "<?=$result['form'];?>"</h3>
 <div class = "screen" id = "screen"></div>
 <br />
 

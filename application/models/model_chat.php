@@ -9,20 +9,51 @@ class Model_Chat extends Model
         $file_text = file_get_contents($file_name, FILE_USE_INCLUDE_PATH);
         $messages = explode("*", $file_text);
 
+        $template_date = "d.m.Y";
+        $now = date($template_date);
+
+        $last_date_message = "";
+
         $result['html'] = "";
 
         if(empty($file_text))
             return $result;
 
-        for($i = 0; $i < count($messages); $i++)
+        if(count($messages) > 20)
+            $start_index = count($messages) - 10;
+        else
+            $start_index = 0;
+
+        for($i = $start_index; $i < count($messages); $i++)
         {
             $m = explode("~", $messages[$i]);
             $name_sender = $m[0];
-            $text_message = $m[1];
-            $date_message = $m[2];
+            $tmessage = $m[1];
+            $date_message = date("d.m.Y", strtotime($m[2]));
+            $pupil_chat_id = $m[3];
 
-            $result['html'] .= "<div class = 'chat_message'><span class = 'text_chat_name'>" . $name_sender . ": </span></b>
-            <span class = 'text_chat_message'>" . $text_message . "</span></div><br />";
+            if($last_date_message != $date_message)
+            {
+                if($date_message == $now)
+                {
+                    $result['html'] .= '<p align="center"> сегодня </p><hr />';
+                    $last_date_message = $date_message;
+                }
+                else {
+                    $last_date_message = $date_message;
+                    $result['html'] .= '<p align="center">' . $date_message . '</p><hr />';
+                }
+            }
+
+            $result['html'] .= "<div class = 'chat_message'>";
+
+            if($pupil_chat_id == $id)
+                $result['html'] .= "<div class = 'mycloud'>";
+            else
+                $result['html'] .= "<div class = 'cloud'>";
+
+            $result['html'] .= "<span class = 'text_chat_name'>" . $name_sender . ": </span><br />
+            <br /><span class = 'text_chat_message'>" . $tmessage . "</span></div></div>";
         }
         return $result;
     }
@@ -38,10 +69,28 @@ class Model_Chat extends Model
 
         $query = "SELECT * FROM pupil WHERE pupil_id = ?";
         $file_path = "chats/" . DB::run($query, [$id])->fetch()['form'] . ".txt";
-        $file_text = '*' . $nf . '~' . $text . '~' . $now;
+        $file_text = '*' . $nf . '~' . $text     . '~' . $now . '~' . $id;
 
         file_put_contents($file_path, $file_text, FILE_APPEND | LOCK_EX);
-        $result['add_html'] = "<b>" . $nf . ": </b>" . $text . "<br />";
+        $result['add_html'] = "<div class = 'chat_message'><div class = 'mycloud'><span class = 'text_chat_name'>" . $nf . ": </span><br />
+        <br /><span class = 'text_chat_message'>" . $text . "</span></div></div>";
+        return $result;
+    }
+
+    public function get_necessary_info($id)
+    {
+        $query = "SELECT * FROM pupil WHERE pupil_id = ?";
+        $form = mb_strtoupper(DB::run($query, [$id])->fetch()['form']);
+
+        if(strlen($form) == 3)
+        {
+            $result['form'] = $form[0] . $form[1] . '-' . $form[2];
+        }
+        else
+        {
+            $result['form'] = $form[0] . '-' . $form[1];
+        }
+
         return $result;
     }
 }

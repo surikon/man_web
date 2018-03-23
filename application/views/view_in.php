@@ -13,7 +13,10 @@
         <li>
             <label for = "password">Пароль:</label>
             <input type = "password" name = "password" class = "edit_input" required/>
-        </li><hr />
+        </li>
+        <li>
+            <div class="g-recaptcha" data-sitekey="6LcxQE4UAAAAALRYawtSWabxw8JQzIF5fnHgTD0X"></div>
+        </li><br /><hr />
         <li>
             <button type="submit" class = "submit" name="authorisation" form="reg_form" value="1">Отправить</button>
         </li>

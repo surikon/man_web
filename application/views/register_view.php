@@ -28,7 +28,11 @@
             <label for = "repass">Повторите пароль:</label>
             <input type="password" name = "repass" class = "edit_input" required />
             <span class = "required_notification_error"><?php if(!empty($result[4])) echo $result[4]; ?></span>
-        </li><hr />
+        </li>
+        <li>
+            <div class="g-recaptcha" data-sitekey="6LcxQE4UAAAAALRYawtSWabxw8JQzIF5fnHgTD0X"></div>
+            <span class = "required_notification_error"><?php if(!empty($result[5])) echo $result[5]; ?></span>
+        </li><br /><hr />
         <li>
             <button type="submit" class = "submit" name="registration" form="reg_form" value="1" action = "">Отправить</button>
         </li>

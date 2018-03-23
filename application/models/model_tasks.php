@@ -18,7 +18,13 @@
                 if (!$s) continue;
 
                 $b1 = true;
-                $s = ($s == 1 ? "normal" : $s == 2 ? "inf" : "alert");
+
+                if($s == 1)
+                    $s = "inf";
+                else if($s == 2)
+                    $s = "normal";
+                else if($s == 3)
+                    $s = "alert";
 
                 if($data[$i]['date_of_completion'] == $now)
                 {
@@ -43,12 +49,15 @@
 
             return $result;
         }
-        public function add_task($user_id, $name, $description, $date)
+        public function add_task($user_id, $name, $description, $date, $status)
         {
             $template_date = "Y-m-d";
             $now = date($template_date);
-            $query = "INSERT INTO tasks (user_id, date_of_creation, date_of_completion, name, description,status) VALUES (?,?,?,?,?,3)";
-            $stmt = DB::run($query, [$user_id, $now, $date, $name, $description]);
+
+            if(empty($status)) $status = 1;
+
+            $query = "INSERT INTO tasks (user_id, date_of_creation, date_of_completion, name, description, status) VALUES (?,?,?,?,?,?)";
+            $stmt = DB::run($query, [$user_id, $now, $date, $name, $description, $status]);
         }
         public function delete_tasks($tasks)
         {

@@ -11,6 +11,6 @@
 
 <br />
 <?php
-    if(!empty($result['error']))echo $result['error'];
-    if(!empty($result['error']))echo $result['success'];
+    if(!empty($result['error']) && $result['error'] != '0')echo $result['error'];
+    if(!empty($result['success']) && $result['success'] != '0')echo $result['success'];
 ?>

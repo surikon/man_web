@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang = "ru">
 <head>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <meta charset = "utf-8">
     <title>Surnachev_Nikita</title>
     <link rel = "stylesheet" type = "text/css" href = "/css/land_page.css" />

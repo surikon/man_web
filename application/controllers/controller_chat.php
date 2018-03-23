@@ -10,7 +10,9 @@ class Controller_Chat extends Controller
 
     function action_index()
     {
-        $this->view->generate("chat_view.php", "template_view2.php");
+        $id = $_SESSION['id'];
+        $result = $this->model->get_necessary_info($id);
+        $this->view->generate("chat_view.php", "template_view2.php", $result);
     }
 
     function action_get_all_messages()

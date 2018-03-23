@@ -42,6 +42,12 @@
                 <label for = "date">Дата выполнения: </label>
                 <input type="date" name = "date" class = "edit_input" />
             </li>
+            <li>
+                <label for = "status">Важность: </label>
+                <p><input type="radio" name = "status" value = "3">Очень
+                <input type = "radio" name = "status" value = "2">Средне
+                    <input type="radio" name="status" value="1">Не важно </p>
+            </li>
             <hr />
             <li>
                 <button type="submit" class = "submit" name="add" form="add_tasks" value="1">Отправить</button>

@@ -91,8 +91,8 @@ var Piechart = function(options){
 var myCanvas = document.getElementById("myCanvas");
 var myLegend = document.getElementById("myLegend");
 
-myCanvas.style.width = "40%";
-myCanvas.style.height = "40%";
+myCanvas.style.width = "75%";
+myCanvas.style.height = "75%";
 
 var ctx = myCanvas.getContext("2d");
 
@@ -100,7 +100,7 @@ var myPiechart = new Piechart(
     {
         canvas:myCanvas,
         data:myMarks,
-        colors:["#fde23e","#f16e23", "#57d9ff","#937e88"],
+        colors:["rgb(31,41,43)","rgb(205,223,185)", "#7E9195","#0A191C"],
         legend:myLegend
     }
 );

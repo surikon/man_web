@@ -31,15 +31,15 @@ th {
 }
 
 .alert{
-    background-color: white;
+    background-color: #ffc0c3;
 }
 
 .normal{
-    background-color: #eafaf1;
+    background-color: #cdfab1;
 }
 
 .inf{
-    background-color: #e2e1ff;
+    background-color: #d0cfff;
 }
 
 .c_con{
@@ -214,11 +214,11 @@ body, html {
 
 .screen {
     width: 90%;
-    padding: 3%;
     border: 1px solid rgb(31,41,43);
-    border-radius: 10px 10px;
-    height: 300px;
-    overflow-y:scroll;
+//    border-radius: 10px 10px;
+    height: 400px;
+        overflow-y:scroll;
+    overflow-x: hidden;
 }
 
 .chat_input input[type = "text"]
@@ -229,16 +229,104 @@ body, html {
 
 .text_chat_message
 {
-    padding-top: 20%;
+    padding-left: 4%;
+    padding-bottom: 4%;
 }
 
 .text_chat_name
 {
     font-weight: 600;
-    padding-bottom: 20%;
+    padding-left: 2%;
+    text-align: left;
 }
 
 .text_chat_date
 {
+    text-align: right;
+    padding-left: 10%;
+}
 
+.chat_message
+{
+    padding-top: 3%;
+    min-height: 10%;
+}
+
+.cloud
+{
+    margin: 3%;
+    max-width: 40%;
+    min-height: 75px;
+    padding: 2%;
+
+    position: relative;
+    background: rgb(205,223,185);
+    border: 6px solid #d0f2dd;
+}
+
+.cloud:after, .cloud:before {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.cloud:after {
+    border-color: rgba(227, 127, 50, 0);
+    border-right-color: rgb(205,223,185);
+    border-width: 30px;
+    top: 50%;
+    margin-top: -30px;
+}
+.cloud:before {
+    border-color: rgba(208, 242, 221, 0);
+    border-right-color: #d0f2dd;
+    border-width: 38px;
+    top: 50%;
+    margin-top: -38px;
+}
+
+.mycloud
+{
+    margin: 3%;
+    max-width: 40%;
+    min-height: 75px;
+    padding: 2%;
+
+    position: relative;
+    background: rgb(177, 223, 146);
+    border: 6px solid #d0f2dd;
+}
+
+.mycloud:after, .mycloud:before {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.mycloud:after {
+    border-color: rgba(227, 127, 50, 0);
+    border-right-color: rgb(177, 223, 146);
+    border-width: 30px;
+    top: 50%;
+    margin-top: -30px;
+}
+.mycloud:before {
+    border-color: rgba(208, 242, 221, 0);
+    border-right-color: #d0f2dd;
+    border-width: 38px;
+    top: 50%;
+    margin-top: -38px;
+}
+
+.div_text_chat
+{
+    margin: 10%;
 }

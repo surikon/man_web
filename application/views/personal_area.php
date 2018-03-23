@@ -24,11 +24,22 @@
     <?php
         if($result['set_mark'] != 0)
         {
-            echo "<hr /><center><p style='font-size: 20px; font-weight: 500'>Рейтинги: </p></center>";
-            echo '<div class = "grf"><canvas id = "myCanvas"></canvas><div id="myLegend"></div></div>';
+            echo "<hr /><center><p style='font-size: 20px; font-weight: 500'>Рейтинги: </p></center><div class = 'p_ava'>";
+            echo '<div class = "c_ava" style = "width:45%"><div class = "grf"><canvas id = "myCanvas"></canvas><div id="myLegend"></div></div></div>';
+        }
+        else
+        {
+            echo '<div class = "c_ava">Нет оценок!</div>';
         }
     ?>
-    <br />
+
+    <div class = "c_ava">
+        <?php
+            echo "<b>Рейтинг класса " . $result['form'] . "</b><br /><br />";
+            echo $result['rating'];
+        ?>
+    </div>
+   </div>
     <script>
         var myMarks = {
             <?php

@@ -24,6 +24,9 @@
             <div class= "c_logo">
                 <a href = "http://<?=$_SERVER['SERVER_NAME'];?>/climate_control">Климат-контроль</a>
             </div>
+            <div class= "c_logo">
+                <a href = "http://<?=$_SERVER['SERVER_NAME'];?>/posture control">Контроль положения осанки</a>
+            </div>
         </div>
 
         <div class="container">

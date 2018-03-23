@@ -15,7 +15,8 @@
                 $task_name = $_POST['name'];
                 $task_description = $_POST['description'];
                 $task_date = $_POST['date'];
-                $this->model->add_task($id, $task_name, $task_description, $task_date);
+                $status = $_POST['status'];
+                $this->model->add_task($id, $task_name, $task_description, $task_date, $status);
             }
 
             if(isset($_POST['del']) && !empty($_POST['tasks']))
