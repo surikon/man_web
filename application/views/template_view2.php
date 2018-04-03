@@ -33,9 +33,9 @@
             <div id="sidebar">
                 <ul>
                     <li><a href="http://<?=$_SERVER['SERVER_NAME'];?>/settings">Настройки</a></li>
-                    <li><a href="">Портфолио </a></li>
-                    <li><a href="">Еще что-то</a></li>
-                    <li><a href="">Еще что-то</a></li>
+                    <li><a href="http://<?=$_SERVER['SERVER_NAME'];?>/about">Портфолио </a></li>
+                    <li><a href="http://<?=$_SERVER['SERVER_NAME'];?>/about">О сайте</a></li>
+                    <li><a href="http://<?=$_SERVER['SERVER_NAME'];?>/about">Контакты</a></li>
                 </ul>
             </div>
             <div class="main-content">

@@ -32,6 +32,20 @@ class Model_Chat extends Model
             $date_message = date("d.m.Y", strtotime($m[2]));
             $pupil_chat_id = $m[3];
 
+            $text1 = $tmessage;
+
+            if($text1 > 40)
+            {
+                $tmessage = "";
+                $last_index = 0;
+                for($i = 40; $i < strlen($text1); $i+=40) {
+                    $tmessage .= substr($text1, $last_index, $i) . "<br />";
+                    $last_index = $i;
+                }
+                if($last_index < strlen($text1) - 1)
+                    $tmessage .= substr($text1, $last_index, strlen($text1));
+            }
+
             if($last_date_message != $date_message)
             {
                 if($date_message == $now)
@@ -66,6 +80,20 @@ class Model_Chat extends Model
 
         $template_date = "Y-m-d";
         $now = date($template_date);
+
+        $text1 = $text;
+
+        if($text1 > 40)
+        {
+            $text = "";
+            $last_index = 0;
+            for($i = 40; $i < strlen($text1); $i+=40) {
+                $text .= substr($text1, $last_index, $i) . "<br />";
+                $last_index = $i;
+            }
+            if($last_index < strlen($text1) - 1)
+                $text .= substr($text1, $last_index, strlen($text1));
+        }
 
         $query = "SELECT * FROM pupil WHERE pupil_id = ?";
         $file_path = "chats/" . DB::run($query, [$id])->fetch()['form'] . ".txt";
